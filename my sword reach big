@@ -1,0 +1,35 @@
+game.StarterGui:SetCore("SendNotification", {
+    Title = "Made by Haxarebest1";
+    Text = "WELCOME TO THE BEST REACH SCRIPT";
+    Duration = 5
+    })
+local sword = game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("Sword") or game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("ClassicSword") or
+game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("Classic Sword") or
+game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("ChristmasSword") or
+game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("Foil") or
+game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("Linked Sword") or
+game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("Black Sword") or
+game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("Thunder Sword") or
+game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("Classic") or
+game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("Sharpened") or
+game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("Medical") or
+game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("Linked") or
+game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("Starter Sword") or
+game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("Default") or
+game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("Extanded") or
+game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("Snow") or
+game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("Brick") or
+game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("Za Hando")
+while wait() do
+if sword then
+    sword.Grip = CFrame.new(0, 30, -1.70000005, -0.967538238, 0, 0.252724677, 0.252724707, 0, 0.967538297, 0, 1, 0) 
+else
+    warn("Sword not found in Backpack!")
+end
+end
+
+
+--0, 15, -1.70000005, -0.967538238, 0, 0.252724677, 0.252724707, 0, 0.967538297, 0, 1, 0
+
+
+--0, 20, -1.70000005, -0.967538238, 0, 0.252724677, 0.252724707, 0, 0.967538297, 0, 1, 0
