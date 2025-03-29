@@ -20,6 +20,8 @@ button1.Draggable = false
 button1.Active = true
 button1.Text = "Hip Height = 17"
 
+local player = game.Players.LocalPlayer.Character
+
 
 player.Humanoid.HipHeight = 17
 
