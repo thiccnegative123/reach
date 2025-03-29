@@ -1,0 +1,71 @@
+local gui = Instance.new("ScreenGui", game.Players.LocalPlayer.PlayerGui)
+local frame = Instance.new("Frame", gui)
+local button = Instance.new("TextButton", frame)
+local button1 = Instance.new("TextButton", frame)
+
+frame.Size = UDim2.new(0.21,0,0.21)
+frame.Position = UDim2.new(0,628,0,107)
+frame.Draggable = true
+frame.Active = true
+
+button.Size = UDim2.new(0.4,0,0.4,0)
+button.Position = UDim2.new(0,13,0,20)
+button.Draggable = false
+button.Active = true
+button.Text = "Hip Height = 0"
+
+button1.Size = UDim2.new(0.4,0,0.4,0)
+button1.Position = UDim2.new(0,98,0,20)
+button1.Draggable = false
+button1.Active = true
+button1.Text = "Hip Height = 30"
+
+
+local player = game.Players.LocalPlayer.Character
+player.Humanoid.Animator:Destroy()
+
+player.Humanoid.HipHeight = 30
+
+game.StarterGui:SetCore("SendNotification", {
+    Title = "Made by Haxarebest1";
+    Text = "WELCOME TO THE BEST REACH SCRIPT";
+    Duration = 5
+    })
+local sword = game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("Sword") or game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("ClassicSword") or
+game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("Classic Sword") or
+game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("ChristmasSword") or
+game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("Foil") or
+game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("Linked Sword") or
+game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("Black Sword") or
+game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("Thunder Sword") or
+game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("Classic") or
+game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("Sharpened") or
+game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("Medical") or
+game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("Linked") or
+game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("Starter Sword") or
+game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("Default") or
+game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("Extanded") or
+game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("Snow") or
+game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("Brick") or
+game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("Za Hando") or
+game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("ClassicSwordV2")
+if sword then
+    sword.Grip = CFrame.new(0, 30, -1.70000005, -0.967538238, 0, 0.252724677, 0.252724707, 0, 0.967538297, 0, 1, 0) 
+else
+    warn("Sword not found in Backpack!")
+end
+
+
+--0, 15, -1.70000005, -0.967538238, 0, 0.252724677, 0.252724707, 0, 0.967538297, 0, 1, 0
+
+
+--0, 20, -1.70000005, -0.967538238, 0, 0.252724677, 0.252724707, 0, 0.967538297, 0, 1, 0
+
+
+button.MouseButton1Click:Connect(function()
+game.Players.LocalPlayer.Character.Humanoid.HipHeight = 0
+end)
+
+button1.MouseButton1Click:Connect(function()
+game.Players.LocalPlayer.Character.Humanoid.HipHeight = 30
+end)
