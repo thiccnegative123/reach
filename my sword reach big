@@ -19,7 +19,7 @@ game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("Default") or
 game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("Extanded") or
 game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("Snow") or
 game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("Brick") or
-game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("Za Hando")
+game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("Za Hando") or
 game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("ClassicSwordV2")
 while wait() do
 if sword then
