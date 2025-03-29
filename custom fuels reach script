@@ -18,7 +18,7 @@ button1.Size = UDim2.new(0.4,0,0.4,0)
 button1.Position = UDim2.new(0,98,0,20)
 button1.Draggable = false
 button1.Active = true
-button1.Text = "Hip Height = 22"
+button1.Text = "Hip Height = 20"
 
 
 local player = game.Players.LocalPlayer.Character
@@ -50,7 +50,7 @@ game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("Brick") or
 game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("Za Hando") or
 game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("ClassicSwordV2")
 if sword then
-    sword.Grip = CFrame.new(0, 22, -1.70000005, -0.967538238, 0, 0.252724677, 0.252724707, 0, 0.967538297, 0, 1, 0) 
+    sword.Grip = CFrame.new(0, 20, -1.70000005, -0.967538238, 0, 0.252724677, 0.252724707, 0, 0.967538297, 0, 1, 0) 
 else
     warn("Sword not found in Backpack!")
 end
@@ -67,5 +67,5 @@ game.Players.LocalPlayer.Character.Humanoid.HipHeight = 0
 end)
 
 button1.MouseButton1Click:Connect(function()
-game.Players.LocalPlayer.Character.Humanoid.HipHeight = 22
+game.Players.LocalPlayer.Character.Humanoid.HipHeight = 20
 end)
