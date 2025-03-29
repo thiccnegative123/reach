@@ -21,9 +21,6 @@ button1.Active = true
 button1.Text = "Hip Height = "17"
 
 
-local player = game.Players.LocalPlayer.Character
-player.Humanoid.Animator:Destroy()
-
 player.Humanoid.HipHeight = 17
 
 game.StarterGui:SetCore("SendNotification", {
@@ -50,7 +47,7 @@ game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("Brick") or
 game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("Za Hando") or
 game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("ClassicSwordV2")
 if sword then
-    sword.Grip = CFrame.new(0, 17, -1.70000005, -0.967538238, 0, 0.252724677, 0.252724707, 0, 0.967538297, 0, 1, 0) 
+    sword.Grip = CFrame.new(0, 0, 17, -0.970142543, 0, 0.242535353, 0.242535636, 0, 0.970142543, 0, 1, 0) 
 else
     warn("Sword not found in Backpack!")
 end
