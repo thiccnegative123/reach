@@ -18,7 +18,7 @@ button1.Size = UDim2.new(0.4,0,0.4,0)
 button1.Position = UDim2.new(0,98,0,20)
 button1.Draggable = false
 button1.Active = true
-button1.Text = "Hip Height = 30"
+button1.Text = "Hip Height = 50"
 
 
 local player = game.Players.LocalPlayer.Character
