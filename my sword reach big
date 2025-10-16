@@ -20,7 +20,8 @@ game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("Extanded") or
 game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("Snow") or
 game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("Brick") or
 game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("Za Hando") or
-game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("ClassicSwordV2")
+game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("ClassicSwordV2") or
+game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("LinkedSword")
 while wait() do
 if sword then
     sword.Grip = CFrame.new(0, 30, -1.70000005, -0.967538238, 0, 0.252724677, 0.252724707, 0, 0.967538297, 0, 1, 0) 
