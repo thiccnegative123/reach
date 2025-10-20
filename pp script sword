@@ -1,0 +1,24 @@
+game.StarterGui:SetCore("SendNotification", {
+    Title = "hello bitch";
+    Text = "Made by Haxarebest1";
+    Duration = 5
+    })
+
+local sword = game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("Sword") or game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("ClassicSword") or
+game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("Classic Sword") or
+game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("ChristmasSword") or
+game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("Foil") or
+game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("Linked Sword") or
+game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("Black Sword") or
+game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("Thunder Sword") or
+game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("Classic") or
+game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("Sharpened") or
+game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("Medical") or
+game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("Linked") or
+game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("Default") or
+game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("ClassicSwordV2")
+if sword then
+    sword.Grip = CFrame.new(2, 1.25, 0, 0.0995037332, 0.995037258, 0, 0.995037258, -0.0995035842, 0, 0, 0, -1)
+else
+    warn("Sword not found in Backpack!")
+end
