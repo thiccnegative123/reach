@@ -1,0 +1,234 @@
+local gui = Instance.new("ScreenGui", game.Players.LocalPlayer.PlayerGui)
+gui.ResetOnSpawn = false
+local frame = Instance.new("Frame", gui)
+local button = Instance.new("TextButton", frame)
+local button1 = Instance.new("TextButton", frame)
+local button2 = Instance.new("TextButton", frame)
+local button3 = Instance.new("TextButton", frame)
+local button4 = Instance.new("TextButton", frame)
+local button5 = Instance.new("TextButton", frame)
+local button6 = Instance.new("TextButton", frame)
+local button8 = Instance.new("TextButton", frame)
+local button9 = Instance.new("TextButton", frame)
+local text = Instance.new("TextLabel", frame)
+local frame1 = Instance.new("Frame", gui)
+local offbutton = Instance.new("TextButton", frame1)
+
+
+frame.Size = UDim2.new(0.69,0,0.3,0)
+frame.Position = UDim2.new(0,226,0,-19)
+frame.Active = true
+frame.Draggable = true
+frame.BackgroundColor3 = Color3.fromRGB(42,0,255)
+
+frame1.Size = UDim2.new(0.14,0,0.1,0)
+frame1.Position = UDim2.new(0,704,0,-54)
+frame1.Active = true
+frame1.Draggable = true
+frame1.BackgroundColor3 = Color3.fromRGB(42,0,255)
+
+offbutton.Size = UDim2.new(0.8,0,0.8,0)
+offbutton.Position = UDim2.new(0,6,0,3)
+offbutton.Active = true
+offbutton.Draggable = false
+offbutton.BackgroundColor3 = Color3.fromRGB(208,255,136)
+offbutton.TextColor3 = Color3.fromRGB(0,170,0)
+offbutton.Text = "on/off"
+
+button.Size = UDim2.new(0.15,0,0.3,0)
+button.Position = UDim2.new(0,14,0,16)
+button.Active = true
+button.Draggable = false
+button.BackgroundColor3 = Color3.fromRGB(208,255,136)
+button.TextColor3 = Color3.fromRGB(0,170,0)
+button.Text = "small reach"
+
+button1.Size = UDim2.new(0.15,0,0.3,0)
+button1.Position = UDim2.new(0,126,0,16)
+button1.Active = true
+button1.Draggable = false
+button1.BackgroundColor3 = Color3.fromRGB(208,255,136)
+button1.TextColor3 = Color3.fromRGB(0,170,0)
+button1.Text = "big reach"
+
+button2.Size = UDim2.new(0.15,0,0.3,0)
+button2.Position = UDim2.new(0,238,0,16)
+button2.Active = true
+button2.Draggable = false
+button2.BackgroundColor3 = Color3.fromRGB(208,255,136)
+button2.TextColor3 = Color3.fromRGB(0,170,0)
+button2.Text = "massive reach"
+
+button3.Size = UDim2.new(0.15,0,0.3,0)
+button3.Position = UDim2.new(0,350,0,16)
+button3.Active = true
+button3.Draggable = false
+button3.BackgroundColor3 = Color3.fromRGB(208,255,136)
+button3.TextColor3 = Color3.fromRGB(0,170,0)
+button3.Text = "hip height reach FFA"
+
+button4.Size = UDim2.new(0.15,0,0.3,0)
+button4.Position = UDim2.new(0,462,0,16)
+button4.Active = true
+button4.Draggable = false
+button4.BackgroundColor3 = Color3.fromRGB(208,255,136)
+button4.TextColor3 = Color3.fromRGB(0,170,0)
+button4.Text = "hip height reach big"
+
+button5.Size = UDim2.new(0.15,0,0.3,0)
+button5.Position = UDim2.new(0,16,0,61)
+button5.Active = true
+button5.Draggable = false
+button5.BackgroundColor3 = Color3.fromRGB(208,255,136)
+button5.TextColor3 = Color3.fromRGB(0,170,0)
+button5.Text = "animation gui"
+
+button6.Size = UDim2.new(0.15,0,0.3,0)
+button6.Position = UDim2.new(0,126,0,61)
+button6.Active = true
+button6.Draggable = false
+button6.BackgroundColor3 = Color3.fromRGB(208,255,136)
+button6.TextColor3 = Color3.fromRGB(0,170,0)
+button6.Text = "kill nearest player"
+
+
+
+button8.Size = UDim2.new(0.15,0,0.3,0)
+button8.Position = UDim2.new(0,238,0,61)
+button8.Active = true
+button8.Draggable = false
+button8.BackgroundColor3 = Color3.fromRGB(208,255,136)
+button8.TextColor3 = Color3.fromRGB(0,170,0)
+button8.Text = "pp sword"
+
+button9.Size = UDim2.new(0.15,0,0.3,0)
+button9.Position = UDim2.new(0,350,0,61)
+button9.Active = true
+button9.Draggable = false
+button9.BackgroundColor3 = Color3.fromRGB(208,255,136)
+button9.TextColor3 = Color3.fromRGB(0,170,0)
+button9.Text = "normal reach"
+
+text.Size = UDim2.new(0.15,0,0.3,0)
+text.Position = UDim2.new(0,490,0,63)
+text.Active = false
+text.Draggable = false
+text.BackgroundColor3 = Color3.fromRGB(208,255,136)
+text.TextColor3 = Color3.fromRGB(255,0,0)
+text.Text = "MADE BY HAXAREBEST1"
+text.BackgroundTransparency = 1
+text.TextSize = 11
+
+button.MouseButton1Click:Connect(function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/thiccnegative123/reach/refs/heads/main/my%20sword%20reach%20small"))();
+end)
+
+button1.MouseButton1Click:Connect(function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/thiccnegative123/reach/refs/heads/main/my%20sword%20reach%20big"))();
+end)
+
+button2.MouseButton1Click:Connect(function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/thiccnegative123/reach/refs/heads/main/my%20sword%20reach%20big"))();
+end)
+
+button3.MouseButton1Click:Connect(function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/thiccnegative123/reach/refs/heads/main/custom%20fuels%20reach%20script"))();
+end)
+
+button4.MouseButton1Click:Connect(function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/thiccnegative123/reach/refs/heads/main/custom%20duels%20script%20op"))();
+end)
+
+button5.MouseButton1Click:Connect(function() loadstring(game:HttpGet("https://raw.githubusercontent.com/thiccnegative123/fnf/refs/heads/main/my%20animation%20GUI"))();
+end)
+
+
+button6.MouseButton1Click:Connect(function()
+    local Players = game:GetService("Players")
+local LocalPlayer = Players.LocalPlayer
+local char = LocalPlayer.Character or LocalPlayer.CharacterAdded:Wait()
+local hrp = char:WaitForChild("HumanoidRootPart")
+
+local function getSword()
+    local swordNames = {
+        "Sword","ClassicSword","Classic Sword","ChristmasSword","Foil",
+        "Linked Sword","Black Sword","Thunder Sword","Classic","Sharpened",
+        "Medical","Linked","Default","ClassicSwordV2"
+    }
+
+    for _, name in ipairs(swordNames) do
+        local tool = LocalPlayer.Backpack:FindFirstChild(name) or char:FindFirstChild(name)
+        if tool and tool:IsA("Tool") then
+            return tool
+        end
+    end
+end
+
+local sword = getSword()
+if not sword then
+    warn("No sword found!")
+    return
+end
+
+-- Function to find nearest player
+local function getNearestPlayer()
+    local nearestPlayer = nil
+    local shortestDistance = math.huge
+
+    for _, player in ipairs(Players:GetPlayers()) do
+        if player ~= LocalPlayer and player.Character and player.Character:FindFirstChild("HumanoidRootPart") then
+            local targetHRP = player.Character.HumanoidRootPart
+            local distance = (hrp.Position - targetHRP.Position).Magnitude
+            if distance < shortestDistance then
+                shortestDistance = distance
+                nearestPlayer = player
+            end
+        end
+    end
+
+    return nearestPlayer
+end
+
+
+while true do
+    local nearestPlayer = getNearestPlayer()
+    if nearestPlayer then
+        local targetHRP = nearestPlayer.Character.HumanoidRootPart
+       
+        sword.Grip = targetHRP.CFrame:ToObjectSpace(hrp.CFrame)
+        -- If you want it aligned exactly: sword.Grip = hrp.CFrame:ToObjectSpace(targetHRP.CFrame)
+    end
+    task.wait()
+end
+end)
+
+button8.MouseButton1Click:Connect(function()
+    local sword = game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("Sword") or 
+                  game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("ClassicSword") or
+                  game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("Classic Sword") or
+                  game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("ChristmasSword") or
+                  game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("Foil") or
+                  game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("Linked Sword") or
+                  game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("Black Sword") or
+                  game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("Thunder Sword") or
+    game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("Classic") or
+                  game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("Sharpened") or
+                  game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("Medical") or
+                  game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("Linked") or
+                  game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("Default") or
+                  game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("ClassicSwordV2")
+    if sword then
+        sword.Grip = CFrame.new(2, 1.25, 0, 0.0995037332, 0.995037258, 0, 0.995037258, -0.0995035842, 0, 0, 0, -1)
+    end
+end)
+
+button9.MouseButton1Click:Connect(function() loadstring(game:HttpGet('https://pastebin.com/raw/Jsghb8bt'))()
+end)
+
+offbutton.MouseButton1Click:Connect(function()
+if frame.Visible == true then
+frame.Visible = false
+else
+frame.Visible = true
+end
+end)
