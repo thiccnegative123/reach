@@ -115,7 +115,7 @@ text.Active = false
 text.Draggable = false
 text.BackgroundColor3 = Color3.fromRGB(208,255,136)
 text.TextColor3 = Color3.fromRGB(255,0,0)
-text.Text = "MADE BY HAXAREBEST1"
+text.Text = "MADE BY HAXAREBEST2"
 text.BackgroundTransparency = 1
 text.TextSize = 11
 
