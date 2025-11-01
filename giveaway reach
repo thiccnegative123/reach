@@ -1,5 +1,5 @@
 game.StarterGui:SetCore("SendNotification", {
-    Title = "Made by Haxarebest1";
+    Title = "Made by Haxarebest2";
     Text = "WELCOME TO THE BEST REACH SCRIPT";
     Duration = 5
     })
