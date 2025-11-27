@@ -27,7 +27,7 @@ credit.Position = UDim2.new(0.5,177,6,-306)
 credit.Active = false
 credit.Draggable = false
 credit.TextColor3 = Color3.fromRGB(0,0,255)
-credit.Text = "made by haxarebest1"
+credit.Text = "made by haxarebest2"
 credit.TextSize = 13
 credit.BackgroundTransparency = 1
 
