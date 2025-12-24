@@ -139,7 +139,8 @@ button4.MouseButton1Click:Connect(function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/thiccnegative123/reach/refs/heads/main/custom%20duels%20script%20op"))();
 end)
 
-button5.MouseButton1Click:Connect(function() loadstring(game:HttpGet("https://raw.githubusercontent.com/thiccnegative123/fnf/refs/heads/main/my%20animation%20GUI"))();
+button5.MouseButton1Click:Connect(function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/thiccnegative123/fnf/refs/heads/main/my%20animation%20pc%20version"))();
 end)
 
 
@@ -222,7 +223,8 @@ button8.MouseButton1Click:Connect(function()
     end
 end)
 
-button9.MouseButton1Click:Connect(function() loadstring(game:HttpGet('https://pastebin.com/raw/Jsghb8bt'))()
+button9.MouseButton1Click:Connect(function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Brew-Softworks/BrewReach/refs/heads/main/loader.lua"))()
 end)
 
 offbutton.MouseButton1Click:Connect(function()
