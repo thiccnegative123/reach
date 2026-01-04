@@ -1,0 +1,51 @@
+local Players = game:GetService("Players")
+local RunService = game:GetService("RunService")
+
+local FRONT_OFFSET = Vector3.new(0, 2, -1)   -- base offset in front of target
+local BOB_AMPLITUDE = 2                   -- make legs move really high
+local BOB_SPEED = 5000000000000000000000000000000000000000000                         -- extremely fast (crazy bobbing)
+
+local function getTargetPlayer()
+    return Players:GetPlayers()[1] -- target player
+end
+
+-- Get R6 leg motors
+local function getLegMotors(character)
+    local torso = character:FindFirstChild("Torso")
+    if not torso then return nil end
+    local leftHip = torso:FindFirstChild("Left Hip")
+    local rightHip = torso:FindFirstChild("Right Hip")
+    return leftHip, rightHip, torso
+end
+
+-- Set legs in front with fast, high bob
+local function setLegInFront(player, targetTorso, time)
+    if not player.Character then return end
+    local leftHip, rightHip, torso = getLegMotors(player.Character)
+    if not leftHip or not rightHip or not torso then return end
+
+    -- Fast up/down movement
+    local bob = math.sin(time * BOB_SPEED) * BOB_AMPLITUDE
+
+    -- Compute world-space positions
+    local leftWorldCFrame = targetTorso.CFrame * CFrame.new(-1, FRONT_OFFSET.Y + bob, FRONT_OFFSET.Z)
+    local rightWorldCFrame = targetTorso.CFrame * CFrame.new(1, FRONT_OFFSET.Y + bob, FRONT_OFFSET.Z)
+
+    -- Convert to local C0 for hips
+    leftHip.C0 = torso.CFrame:Inverse() * leftWorldCFrame
+    rightHip.C0 = torso.CFrame:Inverse() * rightWorldCFrame
+end
+
+-- Main loop
+RunService.Heartbeat:Connect(function()
+    local target = getTargetPlayer()
+    if target and target.Character and target.Character:FindFirstChild("Torso") then
+        local targetTorso = target.Character.Torso
+        local currentTime = tick()
+        for _, player in ipairs(Players:GetPlayers()) do
+            if player ~= target then
+                setLegInFront(player, targetTorso, currentTime)
+            end
+        end
+    end
+end)
