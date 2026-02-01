@@ -215,6 +215,7 @@ while true do
     end
     task.wait()
 end
+end)
 
 
 button8.MouseButton1Click:Connect(function()
