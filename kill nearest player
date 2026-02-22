@@ -1,0 +1,71 @@
+ local Players = game:GetService("Players")
+local LocalPlayer = Players.LocalPlayer
+local char = LocalPlayer.Character or LocalPlayer.CharacterAdded:Wait()
+local hrp = char:WaitForChild("HumanoidRootPart")
+
+-- Update character on respawn
+LocalPlayer.CharacterAdded:Connect(function(newChar)
+    char = newChar
+    hrp = newChar:WaitForChild("HumanoidRootPart")
+end)
+
+local function getSword()
+    local swordNames = {
+        "Sword","ClassicSword","Classic Sword","ChristmasSword","Foil",
+        "Linked Sword","Black Sword","Thunder Sword","Classic","Sharpened",
+        "Medical","Linked","Default","ClassicSwordV2"
+    }
+
+    for _, name in ipairs(swordNames) do
+        local tool = LocalPlayer.Backpack:FindFirstChild(name)
+            or char:FindFirstChild(name)
+        if tool and tool:IsA("Tool") then
+            return tool
+        end
+    end
+end
+
+local sword = getSword()
+if not sword then
+    warn("No sword found!")
+    return
+end
+
+-- Find nearest ALIVE player
+local function getNearestPlayer()
+    local nearestPlayer = nil
+    local shortestDistance = math.huge
+
+    for _, player in ipairs(Players:GetPlayers()) do
+        if player ~= LocalPlayer
+            and player.Character
+            and player.Character:FindFirstChild("HumanoidRootPart")
+            and player.Character:FindFirstChild("Humanoid") then
+
+            local humanoid = player.Character.Humanoid
+            if humanoid.Health > 0 then
+                local targetHRP = player.Character.HumanoidRootPart
+                local distance = (hrp.Position - targetHRP.Position).Magnitude
+
+                if distance < shortestDistance then
+                    shortestDistance = distance
+                    nearestPlayer = player
+                end
+            end
+        end
+    end
+
+    return nearestPlayer
+end
+
+while true do
+    local nearestPlayer = getNearestPlayer()
+    if nearestPlayer and nearestPlayer.Character then
+        local targetHRP = nearestPlayer.Character:FindFirstChild("HumanoidRootPart")
+        if targetHRP then
+            sword.Grip = targetHRP.CFrame:ToObjectSpace(hrp.CFrame)
+        end
+    end
+    task.wait()
+end
+end)
